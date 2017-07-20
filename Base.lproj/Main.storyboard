@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xtJ-P6-wRL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="B7h-j5-GZi">
+            <objects>
+                <navigationController id="xtJ-P6-wRL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fQp-cX-2cd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bXR-Fb-Elo" kind="relationship" relationship="rootViewController" id="QCa-4l-lkW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UzL-6I-1vC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1052" y="-45"/>
+        </scene>
+        <!--Book Tracker-->
+        <scene sceneID="8Uu-JM-srv">
+            <objects>
+                <viewController id="bXR-Fb-Elo" customClass="MainVC" customModule="BookTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WzX-Mb-c52"/>
+                        <viewControllerLayoutGuide type="bottom" id="njk-9B-Zzj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KiO-dL-1Sm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3eF-Fz-aRg">
+                                <rect key="frame" x="147.5" y="293.5" width="80" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRc-b0-mxy">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                        <color key="backgroundColor" red="0.4891591039" green="0.89753806049999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Search"/>
+                                        <connections>
+                                            <action selector="searchPressed:" destination="bXR-Fb-Elo" eventType="touchUpInside" id="D94-Dd-cuH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knu-Wi-xBW">
+                                        <rect key="frame" x="0.0" y="50" width="80" height="30"/>
+                                        <color key="backgroundColor" red="0.79226005079999995" green="0.71810984609999995" blue="0.48854580520000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Library"/>
+                                        <connections>
+                                            <action selector="libraryPressed:" destination="bXR-Fb-Elo" eventType="touchUpInside" id="0KF-F3-gvG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Pik-FK-Z9f"/>
+                                    <constraint firstAttribute="height" constant="80" id="gq5-10-MKn"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.002658101963" green="0.74874854089999998" blue="0.60216104979999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3eF-Fz-aRg" firstAttribute="centerX" secondItem="KiO-dL-1Sm" secondAttribute="centerX" id="hXF-vo-gnM"/>
+                            <constraint firstItem="3eF-Fz-aRg" firstAttribute="centerY" secondItem="KiO-dL-1Sm" secondAttribute="centerY" id="pah-w8-7hz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Book Tracker" id="bd5-50-Hd2"/>
+                    <connections>
+                        <segue destination="82O-5C-fIt" kind="show" identifier="searchSegue" id="tzs-En-83b"/>
+                        <segue destination="2Vx-NU-PqV" kind="show" identifier="librarySegue" id="ptt-lQ-0Q4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GqD-3h-6dq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-210" y="-216"/>
+        </scene>
+        <!--Search Your Library-->
+        <scene sceneID="DTV-Jz-fCd">
+            <objects>
+                <viewController id="82O-5C-fIt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="adR-cV-Bmc"/>
+                        <viewControllerLayoutGuide type="bottom" id="nhZ-t2-POv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DZh-sE-n6V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="heo-Hn-Csz">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hzA-YH-APz"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="heo-Hn-Csz" secondAttribute="trailing" id="HsV-oQ-abq"/>
+                            <constraint firstItem="heo-Hn-Csz" firstAttribute="top" secondItem="adR-cV-Bmc" secondAttribute="bottom" id="SBa-D8-ZW2"/>
+                            <constraint firstItem="heo-Hn-Csz" firstAttribute="leading" secondItem="DZh-sE-n6V" secondAttribute="leading" id="ZfG-7a-gcA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search Your Library" id="7in-sc-b5F"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yYj-WX-a2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="759" y="-385"/>
+        </scene>
+        <!--Add a New Book-->
+        <scene sceneID="YwX-gh-3Xz">
+            <objects>
+                <viewController id="2Vx-NU-PqV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="igg-v5-WCy"/>
+                        <viewControllerLayoutGuide type="bottom" id="EII-V9-Kma"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XDW-hB-nIl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.38526773452758789" green="0.13679999113082886" blue="0.1175478994846344" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add a New Book" id="3N5-qw-XgQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GIw-0K-zfC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="268"/>
+        </scene>
+    </scenes>
+</document>
